@@ -47,29 +47,10 @@ export class AnimalService{
 } */
 
 
-
-import { Injectable } from "@angular/core";
-export enum Category{
-  wild='wild' , domestic='domestic'
-
-}
-
 export interface IAnimal{
-
-  
-
   id:number;
-
   name:string;
-
-  briefDescription:string;
-
-  image:string;
-
-  physicalStrength:number;
-
-  color:string;
-   
-  category:Category;
-
+  description:string;
+  age:number;
+  imageUrl:string;
   }

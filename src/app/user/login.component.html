@@ -1,22 +1,18 @@
- <div class="container">
-    <br>
-    <p class="text-center">Login here to access</p>
-<div class="cards">
 
+<div class="cards">
 <article class="card-body">
-    <a href="" class="float-rigth btn btn-outline-primary">{{pageTitle}}</a>
+    <h5>{{pageTitle}}</h5>
 <form  #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
 
 <div class="form-group">
-    <label for="userName">User Name</label>
     <input type="text" placeholder="User Name" name="userName" id="userName"
     #userName="ngModel"
     ngModel
     class="form-control"
     required>
 </div>
+<br>
 <div class="form-group">
-    <label for="password">password</label>
     <input type="password" placeholder="Password" name="password" id="password"
     #password="ngModel"
     ngModel
@@ -24,9 +20,11 @@
     required>
 </div>
 <br>
-    <a class="btn btn-outline-danger" (click)="cancel()">Cancel</a>
-    <button [disabled]="!loginForm.valid" class="btn btn-outline-info">Log In</button>
-</form>
+    <div class="btns">
+        <div id="btn1"><button class="btn btn-outline-danger" (click)="cancel()">Cancel</button></div>
+        <div id="btn2"><button [disabled]="!loginForm.valid" class="btn btn-outline-info">Log In</button></div>
+    </div>
+    </form>
 </article>
 </div>
-</div> 
+ 

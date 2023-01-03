@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AnimalService } from 'shared/animal.service';
 import { GenericValidator } from 'shared/genericvalidator';
-import { IAnimal, Category } from '../animal';
+import { IAnimal } from '../animal';
 
 @Component({
   selector: 'app-animal-add',
@@ -32,17 +32,15 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
         minLength:'animal name must have 3 characters',
         maxLength:'animal name must have less than  equal to 10 chars'
       },
-      category:{
-        required:'Category is required'
+      briefDescription:{
+        required:'briefDescription is required'
       },
-      physicalStrength:{
-        required:'PhysicalStrength is required'
-      },image:{
+      imageUrl:{
         required:'Image is required'
-      },color:{
+      },
+      age:{
         required:'Color is required'
-      },briefDescription:{
-        required:'briefDescription is required'}
+      }
 
 
       };
@@ -58,13 +56,10 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
 
     this.addAnimal = this.formBuilder.group({
       id: [],
-      name: ['',[ Validators.required,Validators.minLength(3),Validators.maxLength(10)]],
-      color:['',[Validators.required]],
-      briefDescription:['',[Validators.required]],
-      image:['',[Validators.required]],
-      category:[Category.wild,[Validators.required]],
-      physicalStrength:[3,[Validators.required]]
-
+      name: ['',[ Validators.required,Validators.minLength(3),Validators.maxLength(30)]],
+      description:['',[Validators.required]],
+      imageUrl:['',[Validators.required]],
+      age:[3,[Validators.required]]
     });
 
     //when the product is selected from the product list , it should be displayed on the form
@@ -84,35 +79,23 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
     return this.addAnimal.get("name");
     }
 
-  get image(){
-    return this.addAnimal.get("image");
-    }
-  get color(){
-    return this.addAnimal.get("color");
+    get description(){
+      return this.addAnimal.get("briefDescription");
       }
-  get category(){
-      return this.addAnimal.get("category");
-        }
-  get physicalStrength(){
-      return this.addAnimal.get("physicalStrength");
-        }
-        get briefDescription(){
-          return this.addAnimal.get("briefDescription");
-            }
 
-  /* onSubmit() {
-    this.productService.createProduct(this.addProduct.value)
-      .subscribe( data => {console.log(data);
-        this.router.navigate(['products']);
-      });
-  }
- */
-//method which renders the selected product on the form
+  get imageUrl(){
+    return this.addAnimal.get("imageUrl");
+    }
+ 
+  get age(){
+    return this.addAnimal.get("age");
+    }
+
+
   displayAnimal(animalParam:IAnimal |null):void{
 
    this.animal = animalParam;
    if(this.animal){
-//reset the form to its original
     this.addAnimal.reset();
 
     if(this.animal.id==0){
@@ -127,18 +110,11 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
  this.addAnimal.patchValue({
   id:this.animal.id,
    name:this.animal.name,
-   image:this.animal.image,
-   briefDescription:this.animal.briefDescription,
-   color:this.animal.color,
-   physicalStrength:this.animal.physicalStrength,
-   category:this.animal.category,
-
-
+   description:this.animal.description,
+   image:this.animal.imageUrl,
+   age:this.animal.age,
  })
-
-
    }
-
   }
 
   saveAnimal(originalAnimal:IAnimal):void{
@@ -174,7 +150,7 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
     }
 
   }
-//validating on blur ,if user tabs out through the form fields
+
   blur():void{
   this.displayMessage=this.genericValidator.processMessages(this.addAnimal);
 
@@ -191,7 +167,6 @@ export class AnimalAddComponent implements OnInit ,OnDestroy {
         );
       }
       else{
-        //no need to delete the product
         this.animalService.changeSelectedAnimal(null)
       }
     }

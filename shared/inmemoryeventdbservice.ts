@@ -175,7 +175,7 @@ export class InMemoryEventDbService implements InMemoryDbService {
           qty:0
         }]
 
-        /* let animals=[{
+        let animals=[{
 
             id:101,
             name:'cat',
@@ -200,62 +200,8 @@ export class InMemoryEventDbService implements InMemoryDbService {
             name:'rabbit',
             description:'I am Rabbit',
             age:2,
-            imageUrl:'../../assets/tiger.jpg'
-          }]
-          */
-          let animals = [
-            {
-              "id":1,
-          
-              "name":"Lion",
-          
-              "briefDescription":"King of Jungle",
-          
-              "image":"../../assets/Lion_waiting_in_Namibia.jpg",
-          
-              "physicalStrength":4,
-          
-              "color":"Yelloish Orange",
-          
-              "category":"Category.wild"
-          
-              }
-          
-               ,{
-          
-              "id":2,
-          
-              "name":"Dog",
-          
-              "briefDescription":"King of Streets",
-          
-              "image":"../../assets/g",
-          
-              "physicalStrength":2,
-          
-              "color":"Brown",
-          
-              "category":"Category.domestic"
-          
-            }
-          
-             ,{
-          
-              "id":3,
-          
-              "name":"Elephant",
-          
-              "briefDescription":"Silent Killer",
-          
-              "image":"../../assets/African-savanna-elephant.webp",
-          
-              "physicalStrength":1,
-          
-              "color":"White/Black",
-          
-              "category":"Category.domestic"
-            }
-          ]          
+            imageUrl:'../../assets/rabbit.jpg'
+          }]       
 
         return {events, products, animals};
                 

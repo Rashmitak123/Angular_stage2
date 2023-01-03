@@ -129,22 +129,13 @@ filterValue!:string;
 href:string='';
 dataReceived=this.animalService.getAnimals;
 
-@Output() OnAnimalSelection:EventEmitter<IAnimal>=new EventEmitter<IAnimal>();
-
-
- 
-
   constructor(private animalService:AnimalService,
     private router:Router){ }
-
-
   ngOnInit(): void {
     this.href=this.router.url;
     console.log(this.href);
-    //sub object is initialized
        this.sub =this.animalService.getAnimals().subscribe(
          (response)=>{
-
          console.log(response);
          this.animals=response;
          this.filteredAnimals = this.animals;
@@ -159,32 +150,11 @@ dataReceived=this.animalService.getAnimals;
        subscribe(currentAnimal=>{this.selectedAnimal=currentAnimal;
        console.log(this.selectedAnimal);
        });
-
-
      }
 
      ngOnDestroy(): void {
        this.sub.unsubscribe();
   }
-
-
-
-   filterData(val:string){
-
-
-
-
-    this.filteredAnimals=this.animals.filter((a)=>a.category===val);
-  }
-
-
-  onRatingClicked(msg:string):void{
-    this.pageTitle='My Angular App ' +msg;
-  }
-
- onSelect(a:IAnimal){
-  this.OnAnimalSelection.emit(a);
- }
 
 newAnimal():void{
   console.log('in new animal');

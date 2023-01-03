@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   @ViewChild(DashBoardComponent)greetingc!:DashBoardComponent;
   @ViewChild('ref1',{read:TemplateRef})ref1!: TemplateRef<any>;
 
-  pageTitle:string='Online Shopping';
+  pageTitle:string='Online Portal';
 
 get isLoggedIn():boolean{
   return this.authservice.isLoggedIn();

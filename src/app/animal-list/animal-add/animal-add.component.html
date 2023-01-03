@@ -13,49 +13,32 @@
       </div>
 
       <div class="form-group">
-        <label for="color"> Color:</label>
-        <input type="text" formControlName="color"
-         placeholder="color"
-         (blur)="blur()" name="color" class="form-control" id="color">
-      </div>
-      
-      <div class="form-group">
-        <label for="briefDescription"> briefDescription:</label>
-        <input type="text" formControlName="briefDescription"
-         placeholder="briefDescription"
-         (blur)="blur()" name="briefDescription" class="form-control" id="briefDescription">
+        <label for="description"> Description:</label>
+        <input type="text" formControlName="description"
+         placeholder="Description"
+         (blur)="blur()" name="description" class="form-control" id="description">
       </div>
 
       <div class="form-group">
-        <label for="category">
-          Category
-        </label>
-        <select (blur)="blur()" name="category" class='form-control'
-        formControlName="category">
-          <option selected value="wild">Wild</option>
-          <option value="domestic">Domestic</option>
-          
-        </select>
+        <label for="imageUrl">Image:</label>
+        <input (blur)="blur()" type="text" formControlName="imageUrl"
+        placeholder="Animal image" name="imageUrl" class="form-control" id="imageUrl">
       </div>
-
 
       <div class="form-group">
-        <label for="image">Image:</label>
-        <input (blur)="blur()" type="text" formControlName="image"
-        placeholder="Animal image" name="image" class="form-control" id="image">
+        <label for="age"> Age:</label>
+        <input type="text" formControlName="age"
+         placeholder="age"
+         (blur)="blur()" name="age" class="form-control" id="color">
       </div>
-
-
-
-      <div class="form-group">
-        <label for="physicalStrength">physicalStrength:</label>
-        <input (blur)="blur()" type="number" min="1" max="5"
-        formControlName="physicalStrength" placeholder="Animal Strength" name="physicalStrength" class="form-control" id="physicalStrength" >
-      </div>
-
+      <br>
+    <div class="btns">
+      <div id="btn1">
       <button class="btn btn-danger" type="button"
-      (click)="deleteAnimal(animal)">Delete Animal</button>
-      <button [disabled]='!addAnimal.valid ||!addAnimal.dirty' class="btn btn-success">Save Animal</button>
+          (click)="deleteAnimal(animal)">Delete Animal</button></div>
+      <div id="btn2">
+      <button [disabled]='!addAnimal.valid ||!addAnimal.dirty' class="btn btn-success">Save Animal</button></div>
+    </div>
     </form>
     </div>
     <div class='alert alert-danger' *ngIf="errorMessage">

@@ -1,23 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <app-dash-board></app-dash-board>
-    <button (click)="greet()">Click here</button>
+    <button (click)="greet()">Click</button>
     <div class="container-fluid">
         <a class="navbar-brand">{{pageTitle}}</a>
+
        <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active">
             <a routerLink="/welcome" class="nav-link">Home</a>
         </li>
-
         <li class="nav-item" routerLinkActive="active">
-            <a routerLink="/products" class="nav-link">Product List</a>
+            <a routerLink="/products" class="nav-link">List</a>
         </li>
-
-    </ul>
-  <ul class="navbar-nav navbar-right">
-    <li class="nav-item"
-*ngIf="isLoggedIn">
-<a class='nav-link' routerLink="/login">Welcome {{userName}}</a></li>
-
+  
+    <li class="nav-item" *ngIf="isLoggedIn">
+        <a class='nav-link' routerLink="/login">Welcome to {{userName}}</a>
+    </li>
     <li class="nav-item" *ngIf="!isLoggedIn">
         <a class="nav-link" routerLink="/login">Login</a>
         </li>
@@ -27,5 +24,3 @@
   </ul>
     </div>
 </nav>
-
-<ng-template #ref1>hello from ref1</ng-template>

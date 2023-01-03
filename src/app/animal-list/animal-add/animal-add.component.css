@@ -1,0 +1,6 @@
+.btns{
+    display: flex;
+}
+#btn1, #btn2{
+    width: 25%;
+}

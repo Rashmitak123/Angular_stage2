@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
 import { catchError, Observable, tap , BehaviorSubject, throwError, map } from "rxjs";
-import { Category, IAnimal} from "src/app/animal-list/animal";
+import { IAnimal} from "src/app/animal-list/animal";
 @Injectable({
     providedIn:'root'
 })
@@ -41,18 +41,10 @@ changeSelectedAnimal(selectedAnimal:IAnimal | null):void{
   newAnimal():IAnimal{
     return {
       id:0,
-
       name:'',
-
-      briefDescription:'',
-
-      image:'',
-
-      physicalStrength:0,
-
-      color:'',
-
-      category:Category.wild
+      description:'',
+      imageUrl:'\\assets\\cat.jpeg',
+      age:0
     };
   }
   createAnimal(animal:IAnimal):Observable<IAnimal>{

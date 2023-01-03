@@ -32,7 +32,7 @@ const routes:Routes=[
 {path:'',component:HomeComponent,pathMatch:'full',},
 {path:'about-us',component:AboutUsComponent},
 {path:'book',component:BookDataComponent},
-{path:'',component:ShellComponent,
+/* {path:'',component:ShellComponent,
   children:[{path:'welcome', component:WelcomeComponent},
   {
     path:'products',
@@ -42,7 +42,7 @@ const routes:Routes=[
   },
   {path:'',redirectTo:'welcome',pathMatch:'full'},
   {path:'login',component:LoginComponent}
-]},
+]}, */
 {path:'',component:ShellComponent,
   children:[{path:'welcome', component:WelcomeComponent},
   {

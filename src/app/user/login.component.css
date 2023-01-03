@@ -5,3 +5,15 @@
     padding: 20px;
     margin-left: 340px;
 }
+h5{
+    color: white;
+}
+.btns{
+    display: flex;
+}
+#btn1, #btn2{
+    width: 50%;
+}
+.btn{
+    width: 70%;
+}
