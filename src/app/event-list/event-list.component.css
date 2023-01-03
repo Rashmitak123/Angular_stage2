@@ -1,0 +1,27 @@
+.parent{
+    margin-top: 30px;
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 5px 5px;
+}
+
+.list-group-item{
+    display:  flex !important;
+}
+
+h6{
+    margin-right: 10px;
+}
+
+.card-img-top{
+    width: 60% !important;
+    margin: auto !important;
+}
+img{
+    height: 200px;
+    width: 500px;
+}

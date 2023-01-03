@@ -1,0 +1,10 @@
+.main-content{
+    margin-top: 30px ;
+    padding:20px;
+}
+.div1{
+    display: flex;
+}
+.btn1, .btn2, .btn3{
+    width: 33%;
+}

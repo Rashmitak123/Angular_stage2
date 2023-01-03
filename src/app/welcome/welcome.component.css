@@ -1,0 +1,25 @@
+h3{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.divCenter{
+    text-align: center;
+}
+.div{
+    display: flex;
+}
+.div1{
+    width: 50%;
+    text-align: center;
+}
+.div2{
+    width: 50%;
+    text-align: center;
+}
+img{
+    height: 500px;
+    width: 1100px;
+    padding: 10px;
+
+}

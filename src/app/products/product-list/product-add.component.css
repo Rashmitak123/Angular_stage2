@@ -1,0 +1,7 @@
+.btn1{
+    display: flex;
+    margin-left: 300px;
+}
+.btn .btn-outline-success{
+    margin-left: 10px;
+}

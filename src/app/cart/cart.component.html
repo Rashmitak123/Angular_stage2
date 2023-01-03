@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+     Shopping Cart
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+        <table *ngIf="products.length"   class="table">
+
+            <thead>
+                <tr>
+                  <th scope="col">#</th>
+                 <th scope="col">Name</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let prod of products;let i = index">
+                  <td>{{i+1}}</td>
+                  <td >{{prod.name|uppercase}}</td>
+                    <td>{{prod.category}}</td>
+                    <td>{{prod.price|currency:'INR'}}</td>
+                     <td>{{prod.qty}}</td>
+                     <td>{{prod.qty * prod.price}}</td>
+                  </tr>
+              </tbody>
+            </table>
+
+    </div>
+
+
+    </div>
+
+
+    </div>

@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "name":"book",
+        "date": "10/09/2021",
+        "time":"12:30 pm",
+        "price":300,
+        "imageUrl":"../../assets/books.jpg",
+        "location":{
+            "address":"Bobcat Lane",
+            "city":"LI",
+            "country":"Russia"
+        },
+        "sessions":[
+            {
+                "id":101,
+                "name":"Chapter_1",
+                "presentor":"Robert",
+                "duration":"2 hours",
+                "level":5,
+                "voters":["p1", "p2", "p3"]
+            }
+        ]
+    },
+
+    {
+        "id":2,
+        "name":"Magazine",
+        "date": "04/12/2019",
+        "time":"10:00 am",
+        "price":100,
+        "imageUrl":"../../assets/magazine.jpg",
+        "location":{
+            "address":"street five",
+            "city":"LPN",
+            "country":"China"
+        },
+        "sessions":[
+            {
+                "id":103,
+                "name":"Magazine_1",
+                "presentor":"Sam",
+                "duration":"3 hours",
+                "level":2,
+                "voters":["p1", "p2", "p3"]
+            }
+        ]
+    },
+
+    {
+        "id":3,
+        "name":"Newspaper",
+        "date": "13/12/2022",
+        "time":"06:30 am",
+        "price":200,
+        "imageUrl":"../../assets/newspaper.jpg",
+        "location":{
+            "address":"LN street",
+            "city":"NYT",
+            "country":"Japan"
+        },
+        "sessions":[
+            {
+                "id":105,
+                "name":"News_1",
+                "presentor":"Peter",
+                "duration":"30min",
+                "level":1,
+                "voters":["p1", "p2", "p3"]
+            }
+        ]
+    }
+]
+

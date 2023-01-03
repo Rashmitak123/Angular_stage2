@@ -1,0 +1,46 @@
+[{
+
+    "id":111,
+    "name":"the stranger",
+    "price":300,
+    "imageUrl":"../../assets/books.jpg",
+    "category": "Category.books",
+    "rating": 4,
+    "qty":0
+  
+  },{
+    "id":122,
+    "name":"the hindu",
+    "price":100,
+    "imageUrl":"../../assets/newspaper.jpg",
+    "category":"Category.newspaper",
+    "rating": 3.4,
+    "qty":0
+  },{
+    "id":133,
+    "name":"india today",
+    "price":300,
+    "imageUrl":"../../assets/magazine.jpg",
+    "category":"Category.magazine",
+    "rating": 1.8,
+    "qty":0
+  },{
+    "id":144,
+    "name":"the alchemist",
+    "price":200,
+    "imageUrl":"../../assets/books.jpg",
+    "category":"Category.books",
+    "rating": 3,
+    "qty":0
+  },
+  {
+
+    "id":111,
+    "name":"the stranger",
+    "price":300,
+    "imageUrl":"../../assets/books.jpg",
+    "category": "Category.books",
+    "rating": 4,
+    "qty":0
+  
+  }] 

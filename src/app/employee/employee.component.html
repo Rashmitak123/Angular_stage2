@@ -1,0 +1,23 @@
+<div class="table-responsive">
+
+    <table class="table table-striped">
+        <thead>
+          <tr><th>id</th>
+        <th>name</th>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of emps;let index=index ;">
+             <td>{{emp.id}}</td>
+             <td><a [routerLink]="['detail',emp.id]">{{emp.name}}</a></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<a routerLink='leaves'>Check your leaves</a>
+<a routerLink="suggestions">Drop your suggestions</a>
+
+<router-outlet></router-outlet>

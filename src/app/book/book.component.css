@@ -1,0 +1,12 @@
+#btn2, #btn3{
+    margin-top: 40px;
+    margin-right: 40px;   
+    display: inline-block; 
+    text-align: center;
+}
+.btn1{
+    text-align: center;
+}
+.errors{
+    color: red;
+}
